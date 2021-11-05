@@ -37,6 +37,23 @@ Pizza.prototype.displayPizza = function() {
   return "Your Pizza:<br>" + this.size + "<br>Toppings:<br><span id='toppings-span'>" +  this.formatToppings() + "</span>-------------<br>Cost: $" + this.calculatePrice();
 }
 
+// UI Logic
+function toppingsInput() {
+  const checkboxes = document.querySelectorAll('input[name="toppings"]:checked');
+  let toppings = [];
+  checkboxes.forEach(function(checkbox) {
+    toppings.push(checkbox.value);
+  });
+  return toppings;
+}
+
+function pizzaOrder() {
+  let toppings = toppingsInput()
+  let size = $("input:radio[name=size]:checked").val();
+  const pizzaInput = new Pizza(toppings, size);
+  return pizzaInput;
+}
+
 // $(document).ready(function() {
 //   $("#submit").submit(function(event) {
 //     event.preventDefault;
@@ -49,16 +66,6 @@ Pizza.prototype.displayPizza = function() {
 //   });
 // });
 
-
-function toppingsInput() {
-  const checkboxes = document.querySelectorAll('input[name="toppings"]:checked');
-  let toppings = [];
-  checkboxes.forEach(function(checkbox) {
-    toppings.push(checkbox.value);
-  });
-  console.log(toppings);
-}
-
-const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], "Large 14 inch");
-const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], "Medium 10 inch");
-const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], "XL 18 inch");
+// const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], "Large 14 inch");
+// const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], "Medium 10 inch");
+// const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], "XL 18 inch");

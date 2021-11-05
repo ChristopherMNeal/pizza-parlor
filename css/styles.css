@@ -1,3 +1,16 @@
+.toppings  {
+  background-color: pink;
+}
+
+.sizes {
+  background-color: powderblue;
+}
+
+.order-form {
+  margin: 5px;
+  border: red dotted 2px;
+}
+
 #toppings-span {
   text-indent: 10px;
 }

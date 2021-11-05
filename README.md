@@ -65,6 +65,15 @@ Code:
   pizzaTwo.calculatePrice();
 Expected Output: 15
 
+Test: "For 14 and 18 inch pizzas, it should add $2 and $3 for each topping respectively, and return the total price."
+Code:
+  const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
+  pizzaOne.calculatePrice();
+Expected Output: 20
+Code:
+  const pizzaThree = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], 18);
+  pizzaThree.calculatePrice();
+Expected Output: 38
 
 --Instructions--
 -Break the program down into simple, individual behaviors using the test syntax you've learned.

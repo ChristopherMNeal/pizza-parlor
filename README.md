@@ -88,8 +88,17 @@ Code: pizzaLarge.displayPizza();
 Expected Output: "Your Pizza:<br>14<br>Toppings:<br>peppers,pepperoni,pepperoncini<br>$23"
 
 Test: "It should call Pizza.prototype.formatToppings() to display formatted toppings."
-Code: Code: pizzaLarge.displayPizza();
+Code: pizzaLarge.displayPizza();
 Expected Output: "Your Pizza:<br>14<br>Toppings:<br>peppers<br>pepperoni<br>pepperoncini<br>$23"
+
+
+Describe: toppingsInput() 
+Test: "It should take input from the checkbox form name="toppings" and consol log the results"
+Code: 
+// "Pepper" checkbox is checked in UI
+toppingsInput()
+Expected Output: ["Pepper"]
+
 
 --Instructions--
 -Break the program down into simple, individual behaviors using the test syntax you've learned.

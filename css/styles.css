@@ -1,3 +1,7 @@
 #toppings-span {
   text-indent: 10px;
 }
+
+#order-display {
+  font-family: monospace;
+}

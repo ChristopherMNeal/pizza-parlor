@@ -8,7 +8,9 @@
   <title></title>
 </head>
 <body>
+  <div class="container">
   <form>
+    <h3>Toppings:</h3>
     <input type="checkbox" id="pepper" name="toppings" value="Pepper">
     <label for="pepper">Pepper</label>
     <input type="checkbox" id="peppers" name="toppings" value="Peppers">
@@ -41,11 +43,18 @@
     <label for="pineapple">Pineapple</label>
     <input type="checkbox" id="ham" name="toppings" value="Ham">
     <label for="ham">Ham</label>
-    
+    <h3>Sizes:</h3>
+    <input type="radio" id="medium" name="size" value="Medium 10 inch">
+    <label for="medium">Medium 10 inch</label>
+    <input type="radio" id="large" name="size" value="Large 14 inch">
+    <label for="large">Large 14 inch</label>
+    <input type="radio" id="xl" name="size" value="XL 18 inch">
+    <label for="xl">XL 18 inch</label>
+
     <button type="submit" id="submit">Submit</button>
   </form>
   <div id="order-display">
-
+  </div>
   </div>
 </body>
 </html>

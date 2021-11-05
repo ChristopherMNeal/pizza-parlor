@@ -11,6 +11,22 @@
 
 INPUTS: 
   -checkboxes for toppings
+    Pepper
+    Peppers
+    Pepperoni
+    Pepperoncini
+    Roasted Red Peppers
+    Mushroom
+    Extra cheese
+    Sausage
+    Onion
+    Black olives
+    Fresh garlic
+    Tomato
+    Fresh basil
+    Anchovies
+    Pineapple
+    Ham
   -radio button for size
   -name
   -address
@@ -27,7 +43,6 @@ OUTPUTS:
     toppings [topping 1, topping 2, topping 3, etc.] 
     size 
   }
-  method to add toppings
   method to calculate price
 
 --Tests--
@@ -36,6 +51,10 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
 Expected Output: Pizza { toppings: ["peppers", "pepperoni", "pepperoncini"], size: 14 }
 
+Describe: Pizza.prototype.calculatePrice()
+Test: "It should calculate a price based on size and return a price number"
+Code: pizzaOne.calculatePrice();
+Expected Output: 17
 
 
 --Instructions--

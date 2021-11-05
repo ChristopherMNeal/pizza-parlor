@@ -33,8 +33,8 @@ OUTPUTS:
 --Tests--
 Describe: Pizza()
 Test: "It should return a Pizza object with two properties for toppings and size"
-Code: const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], "medium");
-Expected Output: Pizza { toppings: ["peppers", "pepperoni", "pepperoncini"], size: "medium" }
+Code: const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
+Expected Output: Pizza { toppings: ["peppers", "pepperoni", "pepperoncini"], size: 14 }
 
 
 

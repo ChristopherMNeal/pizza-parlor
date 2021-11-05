@@ -8,34 +8,36 @@ body {
   border:dotted black 4px;
   margin-top: 1%;
   padding:1%;
+  background-color: whitesmoke;
+}
 
+.title {
+  background-color: #cd212a8e;
 }
 
 .toppings  {
-  background-color: pink;
+  background-color:#008c4677;
+  padding-left: 25px;
+  padding-top: 10px;
+  line-height: 1.9em;
 }
 
 .sizes {
-  background-color: powderblue;
+  background-color: #008c4677;
+  padding-top: 10px;
 }
 
-#order-form {
-  margin: 5px;
-}
-
-#details {
-  font-family: cursive;
-  font-size: .8em;
-}
-
-#order-display {
-  display: none;
+.starting-cost {
+  text-align: right;
+  font-size: .7em;
+  margin-top: -12px;
+  padding-right: 10px;
+  font-style: italic;
 }
 
 .order-display {
   background-image: url("/img/memo-book.png");
   background-repeat: no-repeat;
-
   font-family: monospace;
   font-size: 2em;
   display: block;
@@ -44,4 +46,17 @@ body {
   margin-right: auto;
   margin-top: 20px;
   padding: 50px 10px 10px 10px;
+}
+
+#order-display {
+  display: none;
+}
+
+#order-form {
+  margin-top: 10px;
+}
+
+#details {
+  font-family: cursive;
+  font-size: .8em;
 }

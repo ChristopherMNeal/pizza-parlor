@@ -44,7 +44,7 @@ function toppingsInput() {
   checkboxes.forEach(function(checkbox) {
     toppings.push(checkbox.value);
   });
-  // if (toppings === ['Pepper', 'Peppers', 'Pepperoni', 'Pepperoncini', 'Roasted red peppers']) {
+  // if (toppings === ['Pepper', 'Peppers', 'Pepperoni', 'Pepperoncini', 'Roast peppers']) {
   //   toppings.push("You ordered the Pepper's Special!")
   // }
   return toppings;

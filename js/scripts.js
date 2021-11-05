@@ -27,14 +27,14 @@ Pizza.prototype.formatToppings = function() {
   const pizzaKeys = Object.values(this.toppings);
   let toppingString = ""
   pizzaKeys.forEach(function(key) {
-    toppingString = toppingString.concat(key + "<br>");
+    toppingString = toppingString.concat("<li>" + key + "</li>");
   });
   return toppingString;
 }
 
 Pizza.prototype.displayPizza = function() {
   cost = this.calculatePrice();
-  return "Your Pizza:<br>" + this.size + "<br>Toppings:<br><span id='toppings-span'>" +  this.formatToppings() + "</span>-------------<br>Cost: $" + this.calculatePrice();
+  return "Your Pizza:<br><div id='details'><ul><li>" + this.size + "</li></ul></div>Toppings:<br><div id='details'><ul>" +  this.formatToppings() + "</ul></div>--------------<br>Cost: <span id='details'>$" + this.calculatePrice() + "</span>";
 }
 
 // UI Logic
@@ -44,6 +44,9 @@ function toppingsInput() {
   checkboxes.forEach(function(checkbox) {
     toppings.push(checkbox.value);
   });
+  // if (toppings === ['Pepper', 'Peppers', 'Pepperoni', 'Pepperoncini', 'Roasted red peppers']) {
+  //   toppings.push("You ordered the Pepper's Special!")
+  // }
   return toppings;
 }
 
@@ -59,10 +62,7 @@ $(document).ready(function() {
     let size = $("input:radio[name=size]:checked").val()
     let pizza = pizzaOrder(size);
     let order = pizza.displayPizza();
+    $("#order-display").show();
     $("#order-display").html(order);
     });
 });
-
-// const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], "Large 14 inch");
-// const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], "Medium 10 inch");
-// const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], "XL 18 inch");

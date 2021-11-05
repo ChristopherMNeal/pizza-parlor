@@ -1,3 +1,16 @@
+body {
+  background-image: url("/img/tablecloth.jpeg");
+  background-attachment: scroll;
+  font-size: 1.2em;
+}
+
+.container {
+  border:dotted black 4px;
+  margin-top: 1%;
+  padding:1%;
+
+}
+
 .toppings  {
   background-color: pink;
 }
@@ -8,13 +21,27 @@
 
 #order-form {
   margin: 5px;
-  border: red dotted 2px;
 }
 
-#toppings-span {
-  text-indent: 10px;
+#details {
+  font-family: cursive;
+  font-size: .8em;
 }
 
 #order-display {
+  display: none;
+}
+
+.order-display {
+  background-image: url("/img/memo-book.png");
+  background-repeat: no-repeat;
+
   font-family: monospace;
+  font-size: 2em;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 50px 10px 10px 10px;
 }

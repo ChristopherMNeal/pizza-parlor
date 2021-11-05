@@ -24,9 +24,12 @@ Pizza.prototype.calculatePrice = function() {
 }
 
 Pizza.prototype.formatToppings = function() {
-  Object.keys(this.toppings).forEach(function(key) {
-    console.log(this.toppings[key]);
+  const pizzaKeys = Object.values(this.toppings);
+  let toppingString = ""
+  pizzaKeys.forEach(function(key) {
+    toppingString = toppingString.concat(key + "<br>");
   });
+  return toppingString;
 }
 
 Pizza.prototype.displayPizza = function() {

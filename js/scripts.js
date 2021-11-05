@@ -34,7 +34,7 @@ Pizza.prototype.formatToppings = function() {
 
 Pizza.prototype.displayPizza = function() {
   cost = this.calculatePrice();
-  return "Your Pizza:<br><div id='details'><ul><li>" + this.size + "</li></ul></div>Toppings:<br><div id='details'><ul>" +  this.formatToppings() + "</ul></div>--------------<br>Cost: <span id='details'>$" + this.calculatePrice() + "</span>";
+  return "Your Pizza:<br><div id='details'><ul><li>" + this.size + "</li></ul>with red sauce<br>and cheese</div><br>Additional<br>Toppings:<br><div id='details'><ul>" +  this.formatToppings() + "</ul></div>--------------<br>Cost: <span id='details'>$" + this.calculatePrice() + "</span>";
 }
 
 // UI Logic

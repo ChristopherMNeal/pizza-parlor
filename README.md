@@ -47,14 +47,19 @@ OUTPUTS:
 
 --Tests--
 Describe: Pizza()
-Test: "It should return a Pizza object with two properties for toppings and size"
+Test: "It should return a Pizza object with two properties for toppings and size."
 Code: const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
 Expected Output: Pizza { toppings: ["peppers", "pepperoni", "pepperoncini"], size: 14 }
 
+
 Describe: Pizza.prototype.calculatePrice()
-Test: "It should calculate a price based on size and return a price number"
+Test: "It should calculate a price based on size and return a price."
 Code: pizzaOne.calculatePrice();
 Expected Output: 17
+
+Test: "For 10 inch pizzas, it should add $1 for each topping and return the total price."
+Code: pizzaTwo.calculatePrice();
+Expected Output: 14
 
 
 --Instructions--

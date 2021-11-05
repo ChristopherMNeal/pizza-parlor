@@ -13,13 +13,16 @@ Pizza.prototype.calculatePrice = function() {
       break;
     case 14:
       cost = 17;
+      cost += 2 * this.toppings.length;
       break;
     case 18:
       cost = 23;
+      cost += 3 * this.toppings.length;
       break;
   }
   return cost;
 }
 
-const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
-const pizzaTwo = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);
+const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
+const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);
+const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], 18);

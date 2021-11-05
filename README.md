@@ -61,17 +61,17 @@ Expected Output: 17
 
 Test: "For 10 inch pizzas, it should add $1 for each topping and return the total price."
 Code: 
-  const pizzaTwo = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);
+  const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);
   pizzaTwo.calculatePrice();
 Expected Output: 15
 
 Test: "For 14 and 18 inch pizzas, it should add $2 and $3 for each topping respectively, and return the total price."
 Code:
   const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
-  pizzaOne.calculatePrice();
-Expected Output: 20
+  pizzaLarge.calculatePrice();
+Expected Output: 23
 Code:
-  const pizzaThree = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], 18);
+  const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], 18);
   pizzaThree.calculatePrice();
 Expected Output: 38
 

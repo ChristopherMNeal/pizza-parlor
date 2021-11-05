@@ -34,19 +34,30 @@ Pizza.prototype.formatToppings = function() {
 
 Pizza.prototype.displayPizza = function() {
   cost = this.calculatePrice();
-  return "Your Pizza:<br><div id='details'><ul><li>" + this.size + "</li></ul>with red sauce<br>and cheese</div><br>Additional<br>Toppings:<br><div id='details'><ul>" +  this.formatToppings() + "</ul></div>--------------<br>Cost: <span id='details'>$" + this.calculatePrice() + "</span>";
+  return "Your Pizza:<br><div id='details'><ul><li>" + this.size + "</li></ul></div><div class='small'>(with red sauce<br>and cheese)</div><br>Additional<br>Toppings:<br><div id='details'><ul>" +  this.formatToppings() + "</ul></div>--------------<br>Cost: <span id='details'>$" + this.calculatePrice() + "</span>";
+}
+
+function noInput(input) {
+  if (!input) {
+    $("#no-input-message").show();
+    returnToPreviousPage();
+    return false;
+  } else {
+    return input;
+  }
 }
 
 // UI Logic
 function toppingsInput() {
   const checkboxes = document.querySelectorAll('input[name="toppings"]:checked');
   let toppings = [];
-  checkboxes.forEach(function(checkbox) {
-    toppings.push(checkbox.value);
-  });
-  // if (toppings === ['Pepper', 'Peppers', 'Pepperoni', 'Pepperoncini', 'Roast peppers']) {
-  //   toppings.push("You ordered the Pepper's Special!")
-  // }
+  if (checkboxes.length === 0) {
+    toppings.push("none");
+  } else {
+    checkboxes.forEach(function(checkbox) {
+      toppings.push(checkbox.value);
+    });
+  }
   return toppings;
 }
 
@@ -59,9 +70,10 @@ function pizzaOrder(size) {
 $(document).ready(function() {
   $("form#order-form").submit(function(event) {
     event.preventDefault();
-    let size = $("input:radio[name=size]:checked").val()
+    let size = noInput($("input:radio[name=size]:checked").val());
     let pizza = pizzaOrder(size);
     let order = pizza.displayPizza();
+    $("#no-input-message").hide();
     $("#order-display").show();
     $("#order-display").html(order);
     });

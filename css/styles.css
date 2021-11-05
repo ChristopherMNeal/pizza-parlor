@@ -36,6 +36,14 @@ body {
   font-style: italic;
 }
 
+.small {
+  font-size: .7em;
+  font-style: italic;
+  margin-left: 15%;
+  margin-top: -8%;
+  margin-bottom: -8%
+}
+
 .order-display {
   background-image: url("/img/memo-book.png");
   background-repeat: no-repeat;
@@ -65,4 +73,11 @@ body {
 #bottom-padding {
   height: 100px;
   visibility: hidden;
+}
+
+#no-input-message {
+  margin-top: 10px;
+  font-style: italic;
+  color: #cd212a;
+  display: none;
 }

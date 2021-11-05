@@ -54,12 +54,16 @@ Expected Output: Pizza { toppings: ["peppers", "pepperoni", "pepperoncini"], siz
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should calculate a price based on size and return a price."
-Code: pizzaOne.calculatePrice();
+Code: 
+  const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
+  pizzaOne.calculatePrice();
 Expected Output: 17
 
 Test: "For 10 inch pizzas, it should add $1 for each topping and return the total price."
-Code: pizzaTwo.calculatePrice();
-Expected Output: 14
+Code: 
+  const pizzaTwo = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);
+  pizzaTwo.calculatePrice();
+Expected Output: 15
 
 
 --Instructions--

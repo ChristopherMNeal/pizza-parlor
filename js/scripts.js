@@ -9,6 +9,7 @@ Pizza.prototype.calculatePrice = function() {
   switch (this.size){
     case 10:
       cost = 11;
+      cost += 1 * this.toppings.length;
       break;
     case 14:
       cost = 17;
@@ -21,3 +22,4 @@ Pizza.prototype.calculatePrice = function() {
 }
 
 const pizzaOne = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
+const pizzaTwo = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);

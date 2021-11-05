@@ -37,7 +37,27 @@ Pizza.prototype.displayPizza = function() {
   return "Your Pizza:<br>" + this.size + "<br>Toppings:<br><span id='toppings-span'>" +  this.formatToppings() + "</span>-------------<br>Cost: $" + this.calculatePrice();
 }
 
+// $(document).ready(function() {
+//   $("#submit").submit(function(event) {
+//     event.preventDefault;
+//     function displayOrder() {
+      
+//       });
+//       console.log(toppings[0]);
+//       // $("#order-display").text(toppings);
+//     }
+//   });
+// });
 
+
+function toppingsInput() {
+  const checkboxes = document.querySelectorAll('input[name="toppings"]:checked');
+  let toppings = [];
+  checkboxes.forEach(function(checkbox) {
+    toppings.push(checkbox.value);
+  });
+  console.log(toppings);
+}
 
 const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], "Large 14 inch");
 const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], "Medium 10 inch");

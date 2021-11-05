@@ -23,10 +23,19 @@ Pizza.prototype.calculatePrice = function() {
   return cost;
 }
 
+Pizza.prototype.formatToppings = function() {
+  Object.keys(this.toppings).forEach(function(key) {
+    console.log(this.toppings[key]);
+  });
+}
+
 Pizza.prototype.displayPizza = function() {
   cost = this.calculatePrice();
   return "Your Pizza:<br>" + this.size + "<br>Toppings:<br>" +  this.toppings + "<br>$" + this.calculatePrice();
 }
+
+
+
 const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], "Large 14 inch");
 const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], "Medium 10 inch");
 const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], "XL 18 inch");

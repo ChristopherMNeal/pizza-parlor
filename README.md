@@ -85,10 +85,7 @@ Expected Output: "Your Pizza:<br>14<br>Toppings:<br>peppers,pepperoni,pepperonci
 Describe: Pizza.prototype.formatToppings()
 Text: "It should format toppings to display in displayPizza()."
 Code: pizzaLarge.formatToppings();
-Expected Output: 
-"Peppers
-Pepperoni
-Pepperoncini"
+Expected Output: "Peppers<br>Pepperoni<br>Pepperoncini"
 
 --Instructions--
 -Break the program down into simple, individual behaviors using the test syntax you've learned.

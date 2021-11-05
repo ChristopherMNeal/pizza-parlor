@@ -47,24 +47,21 @@ function toppingsInput() {
   return toppings;
 }
 
-function pizzaOrder() {
+function pizzaOrder(size) {
   let toppings = toppingsInput()
-  let size = $("input:radio[name=size]:checked").val();
   const pizzaInput = new Pizza(toppings, size);
   return pizzaInput;
 }
 
-// $(document).ready(function() {
-//   $("#submit").submit(function(event) {
-//     event.preventDefault;
-//     function displayOrder() {
-      
-//       });
-//       console.log(toppings[0]);
-//       // $("#order-display").text(toppings);
-//     }
-//   });
-// });
+$(document).ready(function() {
+  $("form#order-form").submit(function(event) {
+    event.preventDefault();
+    let size = $("input:radio[name=size]:checked").val()
+    let pizza = pizzaOrder(size);
+    let order = pizza.displayPizza();
+    $("#order-display").html(order);
+    });
+});
 
 // const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], "Large 14 inch");
 // const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], "Medium 10 inch");

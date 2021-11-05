@@ -23,6 +23,12 @@ Pizza.prototype.calculatePrice = function() {
   return cost;
 }
 
+
+
+Pizza.prototype.displayPizza = function() {
+  cost = this.calculatePrice();
+  return "Your Pizza:<br>" + this.size + "<br>Toppings:<br>" +  this.toppings + "<br>$" + this.calculatePrice();
+}
 const pizzaLarge = new Pizza (["peppers", "pepperoni", "pepperoncini"], 14);
 const pizzaMed = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini"], 10);
 const pizzaXl = new Pizza (["pepper", "peppers", "pepperoni", "pepperoncini", "roasted red peppers"], 18);

@@ -77,16 +77,9 @@ Expected Output: 38
 
 
 Describe: Pizza.prototype.displayPizza()
-Test: "It should display the pizza order and price"
+Test: "It should display the pizza order and price with minimal formatting"
 Code: pizzaLarge.displayPizza();
-Expected Output:
- "Your Pizza:
-  Large (14 inches)
-  Toppings:
-    Peppers
-    Pepperoni
-    Pepperoncini
-  Cost: $23"
+Expected Output: "Your Pizza:<br>14<br>Toppings:<br>peppers,pepperoni,pepperoncini<br>$23"
 
 --Instructions--
 -Break the program down into simple, individual behaviors using the test syntax you've learned.

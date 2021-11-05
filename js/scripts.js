@@ -34,7 +34,7 @@ Pizza.prototype.formatToppings = function() {
 
 Pizza.prototype.displayPizza = function() {
   cost = this.calculatePrice();
-  return "Your Pizza:<br>" + this.size + "<br>Toppings:<br>" +  this.toppings + "<br>$" + this.calculatePrice();
+  return "Your Pizza:<br>" + this.size + "<br>Toppings:<br>" +  this.formatToppings() + "$" + this.calculatePrice();
 }
 
 

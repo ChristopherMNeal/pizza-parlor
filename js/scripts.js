@@ -9,15 +9,21 @@ Pizza.prototype.calculatePrice = function() {
   switch (this.size){
     case "Medium 10 inch":
       cost = 11;
-      cost += 1 * this.toppings.length;
+      if (this.toppings[0] != "none") {
+        cost += 1 * this.toppings.length;
+      }
       break;
     case "Large 14 inch":
       cost = 17;
-      cost += 2 * this.toppings.length;
+      if (this.toppings[0] != "none") {
+        cost += 2 * this.toppings.length;
+      }
       break;
     case "XL 18 inch":
       cost = 23;
-      cost += 3 * this.toppings.length;
+      if (this.toppings[0] != "none") {
+        cost += 3 * this.toppings.length;
+      }
       break;
   }
   return cost;
